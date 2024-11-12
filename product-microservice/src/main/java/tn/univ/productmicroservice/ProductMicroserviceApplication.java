@@ -1,7 +1,10 @@
 package tn.univ.productmicroservice;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+@SpringBootApplication
 public class ProductMicroserviceApplication {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        SpringApplication.run(ProductMicroserviceApplication.class, args);
     }
 }
