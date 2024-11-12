@@ -4,9 +4,10 @@ spring:
   cloud:
     config:
       uri: http://config-server:8888
-      import: "optional:configserver:"
+      fail-fast: true
+      import: "configserver:"
       import-check:
-        enabled: false
+        enabled: true
   datasource:
     url: jdbc:mysql://user-db:3306/user_db
     username: root
