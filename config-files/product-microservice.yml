@@ -3,14 +3,14 @@ spring:
     name: product-microservice # Name for identification in Eureka
   cloud:
     config:
-      uri: http://localhost:8888 # Config Server URL
+      uri: http://config-server:8888
       import: "optional:configserver:" # Optional usage of configserver
       import-check:
         enabled: false # Disable config import check to avoid errors
   datasource:
-    url: jdbc:mysql://localhost:3306/product_db
-    username: root
-    password: password
+    url: jdbc:mysql://${DB_HOST_PRODUCT:-product-db}:3306/product_db
+    username: ${DB_USER:-root}
+    password: ${DB_PASSWORD:-}
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
@@ -22,7 +22,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka # Eureka Server URL
+      defaultZone: http://eureka-server:8761/eureka # Eureka Server URL
 
 management:
   endpoints:
@@ -33,7 +33,7 @@ management:
     sampling:
       probability: 1.0
   zipkin:
-    endpoint: http://localhost:9411/api/v2/spans # Zipkin Server URL
+    endpoint: http://zipkin:9411/api/v2/spans # Zipkin Server URL
 
 logging:
   level:
