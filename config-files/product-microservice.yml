@@ -8,9 +8,9 @@ spring:
       import-check:
         enabled: false # Disable config import check to avoid errors
   datasource:
-    url: jdbc:mysql://${DB_HOST_PRODUCT:-product-db}:3306/product_db
-    username: ${DB_USER:-root}
-    password: ${DB_PASSWORD:-}
+    url: jdbc:mysql://product-db:3306/product_db
+    username: root
+    password: ""
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
