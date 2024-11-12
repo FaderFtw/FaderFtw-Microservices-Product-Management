@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: product-microservice
+  profiles:
+    active: default
+
+server:
+  port: 8082
