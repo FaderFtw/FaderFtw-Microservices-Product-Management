@@ -9,9 +9,9 @@ spring:
       import-check:
         enabled: true
   datasource:
-    url: jdbc:mysql://${placeholder.db.host.user}:3306/${placeholder.db.name.user}
-    username: ${placeholder.db.username}
-    password: ${placeholder.db.password}
+    url: jdbc:mysql://${db.host.user}:3306/${db.name.user}
+    username: ${db.username}
+    password: ${db.password}
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:

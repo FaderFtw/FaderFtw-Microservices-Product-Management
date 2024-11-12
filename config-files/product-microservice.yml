@@ -2,9 +2,9 @@ spring:
   application:
     name: product-microservice
   datasource:
-    url: jdbc:mysql://${placeholder.db.host.product}:3306/${placeholder.db.name.product}
-    username: ${placeholder.db.username}
-    password: ${placeholder.db.password}
+    url: jdbc:mysql://${db.host.product}:3306/${db.name.product}
+    username: ${db.username}
+    password: ${db.password}
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
