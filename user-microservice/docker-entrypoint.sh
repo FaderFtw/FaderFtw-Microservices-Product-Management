@@ -10,7 +10,7 @@ check_config_server() {
 
 # Function to check if the service config is available
 check_service_config() {
-    wget --spider -q http://config-server:8888/product-microservice/default 2>/dev/null
+    wget --spider -q http://config-server:8888/user-microservice/default 2>/dev/null
     return $?
 }
 

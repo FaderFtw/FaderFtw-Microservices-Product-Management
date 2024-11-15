@@ -2,8 +2,13 @@ FROM openjdk:17-jdk-alpine
 
 WORKDIR /app
 
+RUN apk add --no-cache wget curl bash
+
 COPY target/user-microservice-1.0.0.jar app.jar
 
-EXPOSE 8083
+COPY docker-entrypoint.sh .
+RUN chmod +x docker-entrypoint.sh
 
-ENTRYPOINT ["java", "-jar", "app.jar"]
+EXPOSE 8082
+
+ENTRYPOINT ["./docker-entrypoint.sh"]
