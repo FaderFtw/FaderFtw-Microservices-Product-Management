@@ -20,11 +20,11 @@ spring:
     properties:
       hibernate.dialect: org.hibernate.dialect.MariaDBDialect
 
-# Axon Configuration
+
 axon:
   eventhandling:
     processors:
-      '*':
+      default:
         mode: tracking
         source: eventStore
         initial-segment-count: 1
@@ -32,6 +32,13 @@ axon:
     jpa:
       schema-generation:
         enabled: true
+    persistence:
+      sql:
+        create-token-table: true
+        create-event-table: true
+    jdbc:
+      sql:
+        dialect: mysql
 
 eureka:
   client:
