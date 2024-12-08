@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: product-microservice
+  profiles:
+    active: default
+
+axon.evenhandling.processors:
+  product:
+    mode: tracking
+
+server:
+  port: 8082

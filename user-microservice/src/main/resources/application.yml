@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: user-microservice
+  profiles:
+    active: default
+
+server:
+  port: 8083
