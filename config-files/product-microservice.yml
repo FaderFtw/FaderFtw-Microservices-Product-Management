@@ -22,6 +22,8 @@ spring:
 
 
 axon:
+  axonserver:
+    servers: axon-server:8124
   eventhandling:
     processors:
       default:
