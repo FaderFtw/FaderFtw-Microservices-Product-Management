@@ -32,6 +32,7 @@ axon:
     jpa:
       schema-generation:
         enabled: true
+        sequence-style-generator: org.hibernate.id.enhanced.TableGenerator
     persistence:
       sql:
         create-token-table: true
