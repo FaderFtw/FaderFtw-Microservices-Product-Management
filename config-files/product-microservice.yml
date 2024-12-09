@@ -67,3 +67,5 @@ logging:
   level:
     root: INFO
     org.springframework.web: DEBUG
+    org.axonframework.eventhandling: DEBUG
+    org.axonframework.commandhandling: DEBUG
