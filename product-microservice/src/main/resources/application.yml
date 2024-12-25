@@ -4,9 +4,5 @@ spring:
   profiles:
     active: default
 
-axon.evenhandling.processors:
-  product:
-    mode: tracking
-
 server:
   port: 8082

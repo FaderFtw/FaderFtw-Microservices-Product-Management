@@ -8,6 +8,7 @@ import org.axonframework.spring.stereotype.Aggregate;
 import lombok.NoArgsConstructor;
 import tn.univ.productmicroservice.cqrs.commands.CreateProductCommand;
 import tn.univ.productmicroservice.cqrs.events.ProductCreatedEvent;
+
 import static org.axonframework.modelling.command.AggregateLifecycle.apply;
 
 @Aggregate
