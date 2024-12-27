@@ -31,11 +31,4 @@ public class ProductAggregate {
         ));
     }
 
-    @EventSourcingHandler
-    public void on(ProductCreatedEvent event) {
-        this.id = event.getId();
-        this.name = event.getName();
-        this.description = event.getDescription();
-        this.price = event.getPrice();
-    }
 }
